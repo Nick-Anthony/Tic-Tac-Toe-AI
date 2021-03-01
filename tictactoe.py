@@ -171,6 +171,7 @@ def game(board, playerChar, aiChar, playerTurn, valid_moves):
             print_board(board)
             move, valid_moves = user_input(valid_moves)  # gets move and new list of valid moves
             board[move // 3][move % 3] = playerChar  # move // 3 gets row move % 3 gets column
+            num_moves += 1
             if num_moves >= 5:  # checks if num_moves >= 5 b/c there will be no win or tie until 5th move or above
                 win = check_win(board, playerChar)
                 if win == 0:
@@ -179,7 +180,7 @@ def game(board, playerChar, aiChar, playerTurn, valid_moves):
                 if win == 1:
                     print("you have won")
                     noWinOrTie = False  # sets loop variable to false
-            num_moves += 1
+
             playerTurn = not playerTurn  # changes which turn it is
         else:
             if num_moves == 0:
@@ -192,6 +193,7 @@ def game(board, playerChar, aiChar, playerTurn, valid_moves):
                 move = make_best_move(board)
                 valid_moves.remove(ai_moves[move[0]][move[1]])
                 board[move[0]][move[1]] = aiChar
+                num_moves += 1
                 if num_moves >= 5:
                     win = check_win(board, aiChar)
                     if win == 0:
@@ -202,7 +204,6 @@ def game(board, playerChar, aiChar, playerTurn, valid_moves):
                         print("you have lost")
                         noWinOrTie = False  # sets loop variable to false
                         print_board(board)
-                num_moves += 1
                 playerTurn = not playerTurn  # changes which turn it is
 
 
