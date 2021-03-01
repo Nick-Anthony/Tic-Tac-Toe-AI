@@ -11,4 +11,4 @@ Clone the repo and run in a terminal using python
 i.e `python3 tictactoe.py`
 
 
-// // Created by Nick Jordan Anthony on 2021-02-28. // Copyright © 2020 Nick Jordan Anthony. All rights reserved. //
+// // Created by Nick Jordan Anthony on 2021-02-28. // Copyright © 2021 Nick Jordan Anthony. All rights reserved. //
